@@ -57,7 +57,7 @@
     ) // {
       # Overlay for use in NixOS configurations
       overlays.default = final: prev: {
-        speedup = self.packages.${final.system}.speedup;
+        speedup = self.packages.${final.stdenv.hostPlatform.system}.speedup;
       };
     };
 }
